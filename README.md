@@ -53,7 +53,10 @@ escolha-sua-aventura/
   4. É possível reiniciar ou escolher outra aventura a qualquer momento.
 ---
 ### 📖 Aventuras disponíveis
- - 🧟 Sobreviva ao Apocalipse Zumbi – Encare mortos-vivos, faça escolhas e tente sobreviver.
+ - 🧟 Sobreviva ao Apocalipse Zumbi - Encare mortos-vivos, faça escolhas e tente sobreviver.
+ - 🧙🏼‍♂️ Escola de Feitiços - Seu primeiro dia em uma famosa escola de feitiços, faça escolhas e tente sobreviver.
+ - ⚔️ Aventura Medieval - Você é um jovem guerreiro que acabou de chegar ao castelo do rei, faça boas escolhas.
+ - 🚀 Missão Espacial - Você é o comandante da nave Horizon e está em um planeta desconhecido, tente sobreviver.
  - (mais aventuras em breve...)
 
 ---
