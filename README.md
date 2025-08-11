@@ -63,4 +63,4 @@ escolha-sua-aventura/
 
 ### 🌐 Veja o Projeto Online
 Você pode interagir com o jogo diretamente pelo GitHub Pages:
-- [RPG - Escolha sua aventura](https://emillyandradedev.github.io/quizz-cacadores-de-erros-gramatica-e-ortografia/)
+- [RPG - Escolha sua aventura](https://emillyandradedev.github.io/rpg-escolha-sua-aventura/)
