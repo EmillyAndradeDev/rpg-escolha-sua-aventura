@@ -4,10 +4,12 @@
 
 // Lista de aventuras disponíveis
 const aventuras = [
-    { nome: "Sobreviva ao Apocalipse Zumbi", pasta: "zumbi" },
+    { nome: "Apocalipse Zumbi", pasta: "zumbi" },
     { nome: "Escola de Feitiços", pasta: "escola-feiticos"},
     { nome: "Aventura Medieval", pasta: "medieval" },
-    { nome: "Missão Espacial", pasta: "espacial" }
+    { nome: "Missão Espacial", pasta: "espacial" },
+    { nome: "Caça da Noite", pasta: "caca-da-noite"},
+    { nome: "The (Almost) Good Place", pasta: "good-place"}
 ];
 
 // Criar menu
