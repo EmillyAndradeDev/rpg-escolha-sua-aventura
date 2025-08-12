@@ -82,5 +82,52 @@ const historia = [
     id: 13,
     texto: "Você abandona a escola e segue seu caminho sozinho, com muitas histórias para contar.",
     final: "Nem todo mago segue o mesmo caminho."
+  },
+
+  // Nós novos:
+
+  {
+    id: 14,
+    texto: "Depois de ganhar o respeito do dragão, ele oferece um presente mágico. Você aceita?",
+    opcoes: [
+      { texto: "Sim, aceito o presente com gratidão", proximo: 15 },
+      { texto: "Não, prefiro seguir sozinho", proximo: 16 }
+    ]
+  },
+  {
+    id: 15,
+    texto: "O presente é uma pedra que amplifica sua magia. Agora você pode tentar um feitiço avançado. Qual escolhe?",
+    opcoes: [
+      { texto: "Feitiço de invisibilidade", proximo: 17 },
+      { texto: "Feitiço de teletransporte", proximo: 18 }
+    ]
+  },
+  {
+    id: 16,
+    texto: "Você continua sua jornada com determinação e aprende com os erros. Sua próxima aula é de Defesa contra Magia Negra.",
+    opcoes: [
+      { texto: "Estudar com afinco", proximo: 19 },
+      { texto: "Buscar ajuda dos professores", proximo: 20 }
+    ]
+  },
+  {
+    id: 17,
+    texto: "O feitiço funciona perfeitamente e você consegue se esconder dos professores para fazer uma surpresa a seus amigos.",
+    final: "Você é mestre da furtividade!"
+  },
+  {
+    id: 18,
+    texto: "Você teletransporta para a biblioteca, onde encontra um livro antigo cheio de segredos mágicos.",
+    final: "Conhecimento é o maior poder."
+  },
+  {
+    id: 19,
+    texto: "Estudar bastante te ajuda a derrotar um inimigo sombrio que aparece na escola!",
+    final: "Você é um verdadeiro protetor da Escola de Feitiços."
+  },
+  {
+    id: 20,
+    texto: "Os professores ficam impressionados com sua humildade ao pedir ajuda e te recompensam com uma varinha especial.",
+    final: "Sua magia só tende a crescer."
   }
 ];
