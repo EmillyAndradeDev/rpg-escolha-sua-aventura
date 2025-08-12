@@ -57,6 +57,8 @@ escolha-sua-aventura/
  - 🧙🏼‍♂️ Escola de Feitiços - Seu primeiro dia em uma famosa escola de feitiços, faça escolhas e tente sobreviver.
  - ⚔️ Aventura Medieval - Você é um jovem guerreiro que acabou de chegar ao castelo do rei, faça boas escolhas.
  - 🚀 Missão Espacial - Você é o comandante da nave Horizon e está em um planeta desconhecido, tente sobreviver.
+ - 🗡️ Caçadores da Noite - Você e seu parceiro estão na estrada quando o celular toca: desaparecimentos em Willow Creek.
+ - ✨ The (Almost) Good Place - Você acorda em um lugar ensolarado e acolhedor, um 'bairro' governado por arquétipos de bondade.
  - (mais aventuras em breve...)
 
 ---

@@ -1,7 +1,6 @@
 // Nó id (numérico), texto e opções.
 // Cada opção pode alterar 'pontos' (positivos/negativos) e/ou definir flags.
 // Para finalizar a avaliação chame proximo: "julgamento".
-// Para finalizar a avaliação chame proximo: "julgamento".
 const historia = [
     {
         id: 1,
@@ -12,6 +11,7 @@ const historia = [
             { texto: "Procurar por pistas sobre como funciona esse lugar", proximo: 4, pontos: 0 }
         ]
     },
+
     {
         id: 2,
         texto: "O vizinho agradece com sinceridade e te convida para o chá da tarde. Você:",
@@ -20,6 +20,7 @@ const historia = [
             { texto: "Recusa e diz estar ocupado", proximo: 3, pontos: -1 }
         ]
     },
+
     {
         id: 3,
         texto: "Ao explorar, encontra uma loja onde um funcionário deixou um envelope com dinheiro cair. Ninguém percebe. O que você faz?",
@@ -28,6 +29,7 @@ const historia = [
             { texto: "Fingir que nada viu e seguir", proximo: 6, pontos: -3 }
         ]
     },
+
     {
         id: 4,
         texto: "Você encontra anotações que sugerem que nem tudo é tão perfeito, algumas 'falhas' no sistema parecem intencionais. Você:",
@@ -36,6 +38,7 @@ const historia = [
             { texto: "Esconde as anotações; pode ser vantagem", proximo: 6, pontos: -2 }
         ]
     },
+
     {
         id: 5,
         texto: "No chá, a conversa vira sobre moralidade e um dilema é apresentado: salvar uma vida a custo de mentir para um amigo. Você:",
@@ -45,6 +48,7 @@ const historia = [
             { texto: "Tenta encontrar uma terceira via", proximo: 8, pontos: 3, flag: "terceira via" }
         ]
     },
+
     {
         id: 6,
         texto: "Você começa a sentir que suas escolhas têm reflexo imediato na paisagem: pequenos tremores, mudanças sutis. Um morador pergunta por sua opinião sobre justiça. O que responde?",
@@ -53,6 +57,7 @@ const historia = [
             { texto: "Justiça é reparar danos e restaurar relações", proximo: 9, pontos: 2 }
         ]
     },
+
     {
         id: 7,
         texto: "Suas ações no dilema chamaram atenção: um visitante misterioso observa. Ele te oferece um teste final no fim do dia, uma avaliação que pode determinar o seu destino. Você aceita o teste?",
@@ -61,6 +66,7 @@ const historia = [
             { texto: "Recuso; prefiro viver o dia sem ser julgado", proximo: 11 }
         ]
     },
+
     {
         id: 8,
         texto: "Ao procurar uma terceira via, você encontra uma solução criativa que ajuda todos sem mentiras e inspira outros moradores.",
@@ -69,6 +75,7 @@ const historia = [
             { texto: "Guarda a ideia para si (vantagem pessoal)", proximo: 6, pontos: -2 }
         ]
     },
+
     {
         id: 9,
         texto: "Sua resposta provoca um debate, alguns te elogiam, outros questionam. À noite, você recebe um convite para um jantar filosófico.",
@@ -96,6 +103,7 @@ const historia = [
             { texto: "Fugir para o 'Médio Lugar' e viver no anonimato", proximo: 13, pontos: 0 }
         ]
     },
+
     {
         id: 12,
         texto: "Enquanto isso, um rumor corre: há um grupo que tenta sabotar o sistema 'perfeito' para testar quem é realmente bom. Você se aproxima para investigar.",
@@ -104,6 +112,7 @@ const historia = [
             { texto: "Denuncia o grupo ao Guia", proximo: 10, pontos: 1 }
         ]
     },
+
     {
         id: 13,
         texto: "Você escolheu o anonimato. O 'Médio Lugar' é confortável, mas falta sentido às suas ações. Alguns dias depois, um chamado: reavaliação possível. Quer tentar novamente?",
@@ -112,6 +121,7 @@ const historia = [
             { texto: "Ficar no Médio Lugar para sempre", proximo: 21 }
         ]
     },
+
     {
         id: 14,
         texto: "O grupo revela que seu teste revela mais sobre aprender a ser bom do que ser impecável. Eles te propõem uma missão: ajudar a reparar danos reais numa cidade distante.",
@@ -122,18 +132,18 @@ const historia = [
     },
 
     // finais diretos
-
-    //! encontrar um caminho que leve para o id: 20
     {
         id: 20,
         texto: "🏆 FINAL: Você ganhou o Good Place. Suas ações demonstraram crescimento moral consistente; você é convidado a continuar evoluindo num lugar de alegria duradoura.",
         final: "Good Place: Vida plena de aprendizado e felicidade."
     },
+
     {
         id: 21,
         texto: "➖ FINAL: Médio Lugar. Nem terrível nem perfeito,  tempo e trabalho aguardam para transformar escolhas em significado.",
         final: "Medium Place: Uma chance de reflexão contínua."
     },
+    
     {
         id: 22,
         texto: "🔥 FINAL: Bad Place. Suas escolhas revelaram egoísmo ou dano sem arrependimento. Aqui você enfrentará consequências (e talvez oportunidade de mudança).",
