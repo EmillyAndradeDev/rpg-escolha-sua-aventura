@@ -29,15 +29,13 @@ escolha-sua-aventura/
 ├── main.js                 # Lógica principal compartilhada
 │
 ├── assets/                 # Recursos globais
-│   ├── css/
 │   ├── img/
-│   └── sounds/
 │
 ├── adventures/             # Aventuras individuais
 │   ├── zumbi/
 │   │   ├── data.js          # Árvore de decisão da aventura
 │   │   ├── zumbi.html
-│   │   ├── zumbi.css
+│   │   ├── zumbi.css        # Se necessário estilo personalizado por tema
 │   │   └── zumbi.js
 │   ├── medieval/
 │   └── espacial/
