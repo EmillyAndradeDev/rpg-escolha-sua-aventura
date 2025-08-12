@@ -81,7 +81,7 @@ h1 {
 } */
 
 button {
-  width: 300px; /* mesmo tamanho para todos */
+  width: 180px; /* mesmo tamanho para todos */
   padding: 20px 10px;
   margin: 6px auto;
   border: none;
