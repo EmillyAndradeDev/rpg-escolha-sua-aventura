@@ -9,7 +9,8 @@ const aventuras = [
     { nome: "Aventura Medieval", pasta: "medieval" },
     { nome: "Missão Espacial", pasta: "espacial" },
     { nome: "Caça da Noite", pasta: "caca-da-noite"},
-    { nome: "The (Almost) Good Place", pasta: "good-place"}
+    { nome: "The (Almost) Good Place", pasta: "good-place"},
+    { nome: "Circo Misterioso", pasta: "circo-misterioso"}
 ];
 
 // Criar menu
