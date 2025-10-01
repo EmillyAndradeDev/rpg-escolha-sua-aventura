@@ -57,6 +57,7 @@ escolha-sua-aventura/
  - 🚀 Missão Espacial - Você é o comandante da nave Horizon e está em um planeta desconhecido, tente sobreviver.
  - 🗡️ Caçadores da Noite - Você e seu parceiro estão na estrada quando o celular toca: desaparecimentos em Willow Creek.
  - ✨ The (Almost) Good Place - Você acorda em um lugar ensolarado e acolhedor, um 'bairro' governado por arquétipos de bondade.
+ - 🎪 Circo Misterioso - Um circo estranho chega à cidade.
  - (mais aventuras em breve...)
 
 ---
