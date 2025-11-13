@@ -1,39 +1,45 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!doctype html>
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escolha Sua Aventura</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Escolha Sua Aventura - O Grimório</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <header>
-        <div class="container nav-wrapper">
-            <img class="logo-pequeno" src="assets/img/logo-EmillyAndradeDev.png" alt="Logo de Emilly Andrade">
-            <h1 class="logo">EmillyAndrade<span class="realce">DEV</span></h1>
-        </div>
-    </header>
 
-    <div class="conteudo-jogo">
-        <h1>🗡️ Escolha Sua Aventura</h1>
-        <p>Selecione uma história para começar:</p>
-        <div id="menu-aventuras">
-        </div>
+  <header class="text-center py-4">
+    <h1 class="main-title">🗡️ Escolha Sua Aventura 🗡️</h1>
+  </header>
+
+  <main class="container my-5">
+    <div class="text-center mb-4">
+      <h2 class="section-title">O Grimório de Histórias</h2>
+      <p class="section-subtitle">Selecione uma aventura abaixo para começar sua jornada.</p>
     </div>
 
+    <div class="row g-4" id="aventuras-container">
+      </div>
 
-        <footer>
-            <p>Desenvolvido por: <a
-                    href="https://emillyandradedev.github.io/portfolio-emilly-andrade-dev/" target="_blank">EmillyAndradeDev</a></p>
-            <p>Para sugestões e correções, entre em contato: <a
-                    href="mailto: emilly.andrade.digital@gmail.com">emilly.andrade.digital@gmail.com</a></p>
-        </footer>
+  </main>
 
+  <footer class="text-center py-4 mt-5">
+    <p>Desenvolvido por: <a href="https://emillyandradedev.github.io/portfolio-emilly-andrade-dev/" target="_blank" rel="noopener noreferrer">EmillyAndradeDev</a></p>
+    <p>Para sugestões e correções, entre em contato: <a href="mailto:emilly.andrade.digital@gmail.com">emilly.andrade.digital@gmail.com</a></p>
+  </footer>
 
-    <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
 </body>
-
 </html>

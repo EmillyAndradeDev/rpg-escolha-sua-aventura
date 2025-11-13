@@ -1,0 +1,62 @@
+:root {
+    --theme-bg-color: #1a1a1a;
+    --theme-text-color: #c7c7c7;
+    --theme-highlight-color: #8A0303;
+    --theme-button-bg: #4d0202;
+    --theme-button-text: #f0f0f0;
+    --theme-font-title: 'Creepster', cursive; 
+    --theme-font-body: 'Roboto', sans-serif;
+}
+body {
+    background-color: var(--theme-bg-color);
+    background-image: url('https://www.transparenttextures.com/patterns/black-felt.png');
+    color: var(--theme-text-color);
+    font-family: var(--theme-font-body);
+}
+header, footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid var(--theme-highlight-color);
+    backdrop-filter: blur(5px);
+}
+footer {
+    border-top: 2px solid var(--theme-highlight-color);
+    border-bottom: none;
+}
+.logo {
+    font-family: var(--theme-font-title);
+    color: var(--theme-highlight-color);
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+.logo .realce {
+    color: #fff;
+}
+footer a {
+    color: var(--theme-highlight-color);
+}
+.game-container {
+    background-color: rgba(10, 10, 10, 0.8);
+    border: 1px solid var(--theme-highlight-color);
+    box-shadow: 0 0 20px rgba(138, 3, 3, 0.5);
+}
+.story-image {
+    border-color: var(--theme-highlight-color);
+}
+.story-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--theme-text-color);
+}
+.choice-button {
+    background-color: var(--theme-button-bg);
+    color: var(--theme-button-text);
+    font-family: var(--theme-font-body);
+    font-weight: 700;
+    border: 1px solid var(--theme-highlight-color);
+}
+.choice-button:hover {
+    background-color: var(--theme-highlight-color);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(138, 3, 3, 0.5);
+}

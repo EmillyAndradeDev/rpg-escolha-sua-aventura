@@ -1,107 +1,109 @@
 :root {
-    --cor01: #D96299;
-    --cor02: #745549;
-    --cor03: #43291F;
-    --cor04: #43291fd6;
-    --cor05: #ff007780;
-}
-
-header {
-    background-color: #43291f73;
-    padding: 0.82rem 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-radius: 10px;
-}
-
-.logo {
-    font-weight: 800;
-    color: #fff;
-    padding-left: 1%;
-}
-
-.logo .realce {
-    color: var(--cor01);
-}
-
-.nav-wrapper {
-    display: flex;
-    align-items: center;
-}
-
-.logo-pequeno {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-left: 10px;
+    --rpg-parchment: #F5E5C0; /* Pergaminho */
+    --rpg-dark-wood: #4A2E1F; /* Madeira Escura */
+    --rpg-gold: #D4AF37;       /* Ouro */
+    --rpg-red: #8A0303;        /* Vermelho Sangue */
+    
+    --rpg-font-title: 'MedievalSharp', cursive;
+    --rpg-font-body: 'Merriweather', serif;
 }
 
 body {
-    background: url("assets/img/capa-02.jpg") no-repeat center center fixed;
-    background-size: cover;
-    margin: 20px;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #111;
-    color: #f4f4f4;
+    background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+    background-color: var(--rpg-dark-wood);
+    background-size: auto;
+    background-repeat: repeat;
+    
+    font-family: var(--rpg-font-body);
+    color: var(--rpg-parchment);
 }
 
-h1 {
-    margin-top: 20px;
+a {
+    color: var(--rpg-gold);
+    text-decoration: none;
+}
+a:hover {
+    color: #fff;
+    text-decoration: underline;
 }
 
-.conteudo-jogo {
-    background: var(--cor04);
-    box-shadow: 0 0 5px var(--cor01);
-    margin: 30px;
-    padding: 20px;
-    border-radius: 20px;
+header {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-bottom: 3px solid var(--rpg-gold);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-#menu-aventuras {
-    margin-top: 30px;
+.main-title {
+    font-family: var(--rpg-font-title);
+    font-size: 3rem;
+    color: var(--rpg-gold);
+    text-shadow: 2px 2px 4px var(--rpg-dark-wood);
 }
 
-button {
-  width: 180px; 
-  padding: 20px 10px;
-  margin: 6px auto;
-  border: none;
-  border-radius: 8px; 
-  background-color: var(--cor01);
-  color: var(--cor03); 
-  font-size: 16px;
-  cursor: pointer;
-  display: block;
+.section-title {
+    font-family: var(--rpg-font-title);
+    font-size: 2.2rem;
+    color: var(--rpg-gold);
+}
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--rpg-parchment);
 }
 
-button:hover {
-  background-color: whitesmoke;
+.adventure-card {
+    background-color: var(--rpg-parchment);
+    color: var(--rpg-dark-wood);
+    border: 3px solid var(--rpg-dark-wood);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.adventure-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px var(--rpg-gold);
+    border-color: var(--rpg-gold);
+}
+
+.adventure-card .card-img-top {
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 2px solid var(--rpg-dark-wood);
+}
+
+.adventure-card .card-title {
+    font-family: var(--rpg-font-title);
+    font-size: 1.5rem;
+    color: var(--rpg-dark-wood);
+    font-weight: bold;
+}
+
+.adventure-card .card-text {
+    font-family: var(--rpg-font-body);
+    font-size: 0.9rem;
+    min-height: 80px;
+}
+
+.btn-rpg {
+    background-color: var(--rpg-red);
+    color: var(--rpg-parchment);
+    border: 2px solid var(--rpg-dark-wood);
+    font-family: var(--rpg-font-title);
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-rpg:hover {
+    background-color: var(--rpg-gold);
+    color: var(--rpg-dark-wood);
+    border-color: var(--rpg-dark-wood);
 }
 
 footer {
-    text-align: center;
-    padding: 0.82rem 1rem;
-    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-top: 3px solid var(--rpg-gold);
     font-size: 0.9rem;
-    color: white;
-    background-color: #43291f73;
-    border-radius: 10px;
-    margin: 30px 0 0 0;
-}
-
-footer p {
-    margin: 0.5rem 0;
-}
-
-footer a {
-    color: var(--cor01);
-    text-decoration: underline;
-    font-weight: 500;
-}
-
-footer a:hover {
-    text-decoration: underline;
 }

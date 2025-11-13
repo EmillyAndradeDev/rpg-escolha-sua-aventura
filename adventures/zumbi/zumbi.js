@@ -1,29 +1,45 @@
-// lógica específica, se necessário
-
-const divHistoria = document.getElementById("historia");
-const divOpcoes = document.getElementById("opcoes");
+const storyTextElement = document.getElementById("story-text");
+const choicesContainer = document.getElementById("choices-container");
+const storyImageElement = document.getElementById("story-image");
 
 function mostrarCena(id) {
-    const cena = historia.find(c => c.id === id);
+    const cena = storyData.find(c => c.id === id);
 
-    divHistoria.innerHTML = `<p>${cena.texto}</p>`;
-    divOpcoes.innerHTML = "";
+    if (!cena) {
+        console.error(`ERRO: Não foi possível encontrar a cena com id ${id}.`);
+        storyTextElement.innerText = `ERRO: Cena ${id} não encontrada.`;
+        choicesContainer.innerHTML = `<button class="choice-button" onclick="location.href='../../index.html'">Voltar ao Menu</button>`;
+        return;
+    }
 
-    // Se não houver opções, é final
+    storyTextElement.innerText = cena.texto;
+
+    if (cena.image && storyImageElement) {
+        storyImageElement.src = cena.image;
+        storyImageElement.alt = cena.altText || cena.texto;
+        storyImageElement.style.display = 'block';
+    } else if (storyImageElement) {
+        storyImageElement.style.display = 'none';
+    }
+    choicesContainer.innerHTML = "";
+
     if (!cena.opcoes || cena.opcoes.length === 0) {
-        divOpcoes.innerHTML = `<p>🏁 Fim da história</p>
-                               <button onclick="location.href='../../index.html'">Voltar ao menu</button>`;
+        choicesContainer.innerHTML = `<button class="choice-button" onclick="location.href='../../index.html'">
+            🏁 Voltar ao Menu Principal
+        </button>`;
         return;
     }
 
     cena.opcoes.forEach(opcao => {
         const btn = document.createElement("button");
+        btn.classList.add('choice-button');
         btn.textContent = opcao.texto;
-        btn.onclick = () => mostrarCena(opcao.proximo);
-        divOpcoes.appendChild(btn);
+        btn.addEventListener('click', () => {
+            mostrarCena(opcao.proximo);
+        });
+
+        choicesContainer.appendChild(btn);
     });
 }
 
-// Começa no ID 1
 mostrarCena(1);
-
