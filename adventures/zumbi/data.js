@@ -1,7 +1,7 @@
 const storyData = [
     {
         id: 1,
-        image: "img/lab-corredor.jpg",
+        image: "img/id01-lab-corredor.png",
         altText: "Um corredor de laboratório escuro e abandonado",
         texto: "Você acorda em um laboratório abandonado. O som de passos arrastados ecoa no corredor. O que você faz?",
         opcoes: [
@@ -12,7 +12,7 @@ const storyData = [
 
     {
         id: 2,
-        image: "img/zumbi-comendo.jpg",
+        image: "img/id02-zumbi-comendo-02.png",
         altText: "Um zumbi agachado no corredor, mastigando algo",
         texto: "Você se aproxima e vê um zumbi mastigando algo. Ele ainda não percebeu você.",
         opcoes: [
@@ -23,7 +23,7 @@ const storyData = [
 
     {
         id: 3,
-        image: "img/janela-quebrada.jpg",
+        image: "img/id03-janela-quebrada.png",
         altText: "Uma janela de escritório quebrada dando para um beco",
         texto: "A porta dos fundos está trancada, mas há uma janela quebrada.",
         opcoes: [
@@ -34,7 +34,7 @@ const storyData = [
 
     {
         id: 4,
-        image: "img/zumbi-ataque.jpg",
+        image: "img/id04-zumbi-ataque.png",
         altText: "O zumbi se virando para atacar",
         texto: "Você acerta o zumbi, mas ele ainda está de pé!",
         opcoes: [
@@ -45,7 +45,7 @@ const storyData = [
 
     {
         id: 5,
-        image: "img/armario.jpg",
+        image: "img/id05-armario.png",
         altText: "Uma fresta de um armário de metal",
         texto: "Você se esconde atrás de um armário, mas o zumbi sente seu cheiro...",
         opcoes: [
@@ -56,7 +56,7 @@ const storyData = [
 
     {
         id: 6,
-        image: "img/horda.jpg",
+        image: "img/id06-horda.png",
         altText: "Uma rua cheia de zumbis andando",
         texto: "Você escapa para a rua, mas vê uma horda vindo em sua direção.",
         opcoes: [
@@ -67,7 +67,7 @@ const storyData = [
 
     {
         id: 7,
-        image: "img/zumbi-caido.jpg",
+        image: "img/id07-zumbi-caido-02.png",
         altText: "O zumbi caído no chão, mas mais barulhos são ouvidos",
         texto: "O zumbi cai no chão. Você respira aliviado, mas ouve mais passos...",
         opcoes: [
@@ -78,7 +78,7 @@ const storyData = [
 
     {
         id: 8,
-        image: "img/mochila.jpg",
+        image: "img/id08-mochila-02.png",
         altText: "Uma mochila de suprimentos jogada em um canto de uma sala",
         texto: "Na sala ao lado, você encontra uma mochila com suprimentos.",
         opcoes: [
@@ -89,7 +89,7 @@ const storyData = [
 
     {
         id: 9,
-        image: "img/game-over-armario.jpg",
+        image: "img/id09-game-over-armario.png",
         altText: "A porta do armário se abrindo e revelando um zumbi",
         texto: "O zumbi abre o armário e te encontra... Fim de jogo!",
         opcoes: []
@@ -97,7 +97,7 @@ const storyData = [
 
     {
         id: 10,
-        image: "img/carro.jpg",
+        image: "img/id10-carro-02.png",
         altText: "As chaves do carro no painel, com zumbis batendo no vidro",
         texto: "Você entra no carro e encontra as chaves no painel. Ao ligar, o barulho atrai ainda mais zumbis...",
         opcoes: [
@@ -108,7 +108,7 @@ const storyData = [
 
     {
         id: 11,
-        image: "img/beco-portao.jpg",
+        image: "img/id11-beco-portao.png",
         altText: "Um beco sem saída com um portão de ferro trancado",
         texto: "No beco, você encontra um portão trancado e um cano enferrujado.",
         opcoes: [
@@ -119,7 +119,7 @@ const storyData = [
 
     {
         id: 12,
-        image: "img/game-over-horda.jpg",
+        image: "img/id12-game-over-horda.png",
         altText: "Muitos zumbis te cercando",
         texto: "Você luta bravamente, mas a quantidade de zumbis é grande demais. Você é devorado. Fim.",
         opcoes: []
@@ -127,7 +127,7 @@ const storyData = [
 
     {
         id: 13,
-        image: "img/game-over-teto.jpg",
+        image: "img/id13-game-over-teto-03.png",
         altText: "Um zumbi caindo do teto em cima de você",
         texto: "Enquanto procura, um zumbi cai do teto e te ataca. Você não sobrevive. Fim.",
         opcoes: []
@@ -135,7 +135,7 @@ const storyData = [
 
     {
         id: 14,
-        image: "img/estrada-livre.jpg",
+        image: "img/id14-estrada-livre.png",
         altText: "Uma estrada vazia ao pôr do sol, vista de dentro de um carro",
         texto: "Você atropela a horda e segue para fora da cidade. Sobrevive... por enquanto. Parabéns!",
         opcoes: []
@@ -143,7 +143,7 @@ const storyData = [
 
     {
         id: 15,
-        image: "img/vitoria-portao.jpg",
+        image: "img/id15-vitoria-portao.png",
         altText: "A visão do topo de um portão, com uma rua segura do outro lado",
         texto: "Você escala o portão e escapa para uma área segura. Parabéns, você sobreviveu dessa vez!",
         opcoes: []
@@ -151,8 +151,8 @@ const storyData = [
 
     {
         id: 16,
-        image: "img/game-over-portao.jpg",
-        altText: "Zumbis te agarrando enquanto você tenta abrir um portão",
+        image: "img/id16-game-over-portao-02.png",
+        altText: "Zumbis chegando próximo ao portão",
         texto: "O barulho ao tentar abrir o portão atrai zumbis. Você não consegue escapar. Fim.",
         opcoes: []
     }

@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nome: "Apocalipse Zumbi", 
             pasta: "zumbi",
             descricao: "Encare mortos-vivos, faça escolhas difíceis e tente sobreviver a mais um dia no caos.",
-            imagem: "assets/img/aventura-zumbi.jpg" 
+            imagem: "assets/img/aventura-zumbi.png" 
         },
         { 
             nome: "Escola de Feitiços", 
