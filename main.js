@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nome: "Escola de Feitiços", 
             pasta: "escola-feiticos",
             descricao: "Seu primeiro dia em uma famosa escola de magia. O que pode dar errado?",
-            imagem: "assets/img/aventura-feiticos.jpg"
+            imagem: "assets/img/aventura-escola-de-feiticos.png"
         },
         { 
             nome: "Aventura Medieval", 
