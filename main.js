@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nome: "Aventura Medieval", 
             pasta: "medieval",
             descricao: "Você é um jovem guerreiro que acabou de chegar ao castelo do rei. Faça boas escolhas.",
-            imagem: "assets/img/aventura-medieval.jpg"
+            imagem: "assets/img/aventura-medieval.png"
         },
         { 
             nome: "Missão Espacial", 
