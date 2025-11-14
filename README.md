@@ -7,7 +7,7 @@ O projeto é modular, permitindo criar e jogar várias histórias no mesmo siste
 
 ## 🎨 Screenshot
 
-![Screenshot of RPG - Escolha Sua Aventura](screenshot.jpeg) 
+![Screenshot of RPG - Escolha Sua Aventura](screenshot.png) 
 
 ---
 
