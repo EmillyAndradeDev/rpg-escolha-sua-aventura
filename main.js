@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nome: "Caça da Noite", 
             pasta: "caca-da-noite",
             descricao: "Desaparecimentos em Willow Creek. Você e seu parceiro devem investigar.",
-            imagem: "assets/img/aventura-caca.jpg"
+            imagem: "assets/img/aventura-caca-da-noite.png"
         },
         { 
             nome: "The (Almost) Good Place", 
