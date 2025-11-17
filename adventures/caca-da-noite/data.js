@@ -1,206 +1,132 @@
-// Narrativa estilo "escolha seu destino" com pistas embutidas nas opções.
-// As opções podem adicionar pistas (pistas: ['nome']) que o jogador coleciona no estado.
-const historia = [
-  {
-    id: 1,
-    texto: "Você e seu parceiro estão na estrada quando o celular toca: desaparecimentos em Willow Creek. Chegando lá, a polícia está perdida. Onde você começa a investigação?",
-    opcoes: [
-      { texto: "Investigar o motel abandonado (cheiro estranho)", proximo: 2, pistas: ["cheiro estranho"] },
-      { texto: "Perguntar no bar local (testemunhas)", proximo: 3, pistas: ["testemunha da taverna"] },
-      { texto: "Vasculhar a floresta próxima (pegadas e manchas)", proximo: 4, pistas: ["pegadas", "mancha de sangue"] }
-    ]
-  },
-
-  {
-    id: 2,
-    texto: "No motel você encontra quartos revirados e marcas de frio intenso, como se algo tivesse sugado calor. Um frasco com cristais quebrados no chão chama atenção.",
-    opcoes: [
-      { texto: "Levar um cristal (pegar evidência)", proximo: 5, pistas: ["cristal"] },
-      { texto: "Anotar o padrão de marcas e voltar", proximo: 6 }
-    ]
-  },
-
-  {
-    id: 3,
-    texto: "No bar, um bêbado jura ter visto alguém com olhos brilhantes e fala de uma criatura que se alimenta à noite após morder. Ele também menciona um som uivante na floresta.",
-    opcoes: [
-      { texto: "Anotar o depoimento (útil depois)", proximo: 6, pistas: ["depoimento: olhos brilhantes"] },
-      { texto: "Pagar o homem e perguntar mais detalhes", proximo: 7, pistas: ["nome do suspeito"] }
-    ]
-  },
-
-  {
-    id: 4,
-    texto: "Na floresta você acha pegadas que alternam entre patas e passos humanos, próximo a elas, um colar com cabelo preso (pelos).",
-    opcoes: [
-      { texto: "Pegar o colar como prova", proximo: 5, pistas: ["pelos"] },
-      { texto: "Medir as pegadas e retornar", proximo: 6, pistas: ["medida das pegadas"] }
-    ]
-  },
-
-  {
-    id: 5,
-    texto: "Você guardou a evidência no porta-malas. As pistas começando a formar um padrão, mas ainda falta confirmar a criatura. Próximo passo?",
-    opcoes: [
-      { texto: "Analisar as pistas no carro com equipamentos", proximo: 8 },
-      { texto: "Ir até a casa da última vítima para procurar mais sinais", proximo: 9 }
-    ]
-  },
-
-  {
-    id: 6,
-    texto: "Você reuniu algumas informações iniciais. Hora de decidir a linha de investigação principal.",
-    opcoes: [
-      { texto: "Focar em provas físicas (floresta/motel)", proximo: 4 },
-      { texto: "Focar em entrevistas e rumores (bar/pessoas)", proximo: 3 },
-      { texto: "Ir direto ao local onde a última vítima foi vista (rua principal)", proximo: 10 }
-    ]
-  },
-
-  {
-    id: 7,
-    texto: "O bêbado entrega um nome: 'O Ferreiro', alguém que mora fora da cidade. Ele também desenha um símbolo estranho. Isso te dá um novo rumo.",
-    opcoes: [
-      { texto: "Seguir até a casa do Ferreiro", proximo: 11, pistas: ["nome do ferreiro", "símbolo"] },
-      { texto: "Voltar ao carro e analisar as provas", proximo: 8 }
-    ]
-  },
-
-  {
-    id: 8,
-    texto: "No carro, você usa o kit e analisa as amostras:\n- Cristal: resíduos místicos.\n- Pelos: composição incomum (metálica).\n- Testemunho: fala de mordidas e olhos brilhantes.\nCom isso em mãos, qual hipótese você prefere testar?",
-    opcoes: [
-      { texto: "Hipótese: vampiro/demônio (magia + sangue)", proximo: 12 },
-      { texto: "Hipótese: lobisomem/fera (pelos, uivos)", proximo: 13 },
-      { texto: "Hipótese: espírito/assombração (frio, cristais)", proximo: 14 }
-    ]
-  },
-
-  {
-    id: 9,
-    texto: "Na casa da vítima você encontra arranhões nas paredes e símbolos riscados. Há vestígios de sangue e um bilhete com referências a luas.",
-    opcoes: [
-      { texto: "Levar o bilhete e prosseguir à biblioteca da cidade para pesquisar", proximo: 8, pistas: ["bilhete com referências a luas"] },
-      { texto: "Tentar seguir pegadas saindo pela janela", proximo: 4 }
-    ]
-  },
-
-  {
-    id: 10,
-    texto: "Na rua principal, moradores se trancaram; uma velha senhora te mostra uma foto com um homem que sempre aparece perto das vítimas.",
-    opcoes: [
-      { texto: "Investigar o homem da foto (possível suspeito)", proximo: 11, pistas: ["foto do homem"] },
-      { texto: "Coletar relatos e voltar ao carro", proximo: 6 }
-    ]
-  },
-
-  // identificação e escolha de arma (nós que levam ao confronto)
-  {
-    id: 11,
-    texto: "Chegando à casa do Ferreiro, você nota ferramentas quebradas e marcas de garras. O local fede a metal queimado.",
-    opcoes: [
-      { texto: "Entrar silenciosamente e observar", proximo: 15 },
-      { texto: "Arrombar a porta e confrontar", proximo: 16 }
-    ]
-  },
-
-  {
-    id: 12,
-    texto: "Você decide que a criatura é possivelmente um vampiro/demônio. Hora de se armar. Qual equipamento você escolhe?",
-    opcoes: [
-      { texto: "Estaca de madeira + alho", proximo: 17, arma: "estaca" },
-      { texto: "Ritual com os cristais (magia)", proximo: 18, arma: "ritual" },
-      { texto: "Arma de fogo comum", proximo: 19, arma: "arma" }
-    ]
-  },
-
-  {
-    id: 13,
-    texto: "Você aposta na hipótese de lobisomem. Escolha sua abordagem:",
-    opcoes: [
-      { texto: "Bala de prata e armadilha", proximo: 20, arma: "prata" },
-      { texto: "Isolar e esperar a lua cheia passar", proximo: 21, arma: "isolamento" },
-      { texto: "Atacar com fogo", proximo: 22, arma: "fogo" }
-    ]
-  },
-
-  {
-    id: 14,
-    texto: "Hipótese: assombração/espírito. Você precisa de proteção espiritual. O que faz?",
-    opcoes: [
-      { texto: "Ritual de banimento com cristais", proximo: 18, arma: "ritual" },
-      { texto: "Invocar um padre/caçador experiente", proximo: 23, arma: "aliado" },
-      { texto: "Fugir e chamar reforços", proximo: 6, arma: "fugir" }
-    ]
-  },
-
-  // confrontos / resultados
-  {
-    id: 15,
-    texto: "Você observa no canto uma sombra grande movendo-se, há olhos brilhantes. Hora do confronto!",
-    opcoes: [
-      { texto: "Voltar ao carro para pegar equipamentos", proximo: 8 },
-      { texto: "Preparar um ataque surpresa aqui mesmo", proximo: 24 }
-    ]
-  },
-
-  {
-    id: 16,
-    texto: "Ao arrombar, o Ferreiro se revela: é uma criatura feral com pedaços de metal cravados na pele. Ele investe contra você.",
-    opcoes: [
-      { texto: "Recuar e formular plano", proximo: 8 },
-      { texto: "Enfrentar sem pensar duas vezes", proximo: 24 }
-    ]
-  },
-
-  // finais relacionados à vampiro/demônio
-  {
-    id: 17,
-    texto: "Você tenta matar com estaca + alho. O ser reage violentamente.",
-    final: "Se a criatura fosse vampírica, você pode ter tido sucesso, mas sem confirmação, acabou atraindo uma horda. Fim trágico."
-  },
-
-  {
-    id: 18,
-    texto: "Você realiza o ritual com os cristais. Uma onda de energia banidora ilumina o local.",
-    final: "O ritual funciona: a entidade é selada. Fim. Caso encerrado!."
-  },
-
-  {
-    id: 19,
-    texto: "A bala comum não surte efeito e apenas enfurece a criatura.",
-    final: "Armas comuns servem para ferir humanos, não entidades. Você foi derrotado."
-  },
-
-  // finais relacionados a lobisomem
-  {
-    id: 20,
-    texto: "Você usa bala de prata e acerta em cheio.",
-    final: "O lobisomem cai. Vocês salvaram Willow Creek. Final heróico."
-  },
-
-  {
-    id: 21,
-    texto: "Isolamento falhou: a comunidade já estava no perigo e a criatura atacou à noite.",
-    final: "Você não conseguiu conter a ameaça a tempo. Final trágico."
-  },
-
-  {
-    id: 22,
-    texto: "O fogo afasta a criatura por um tempo, mas acaba incendiando a oficina. Vítimas civis aparecem.",
-    final: "Você sobrevive, mas com pesadas consequências. Final amargo."
-  },
-
-  // aliados / finais alternativos
-  {
-    id: 23,
-    texto: "O caçador experiente chega e, junto com você, realiza um banimento ou emboscada.",
-    final: "Com ajuda, vocês neutralizam a ameaça com menos perdas. Final de equipe."
-  },
-  
-  {
-    id: 24,
-    texto: "No confronto direto sem preparo, tudo pode acontecer. Você foi pego de surpresa.",
-    final: "Confronto precipitado: você caiu. Fim."
-  }
+const storyData = [
+    {
+        id: 1,
+        image: "img/chegada-cidade.jpg",
+        altText: "O Impala 67 preto parado em frente a uma placa de 'Bem-vindo a Willow Creek' sob chuva.",
+        texto: "Você e seu irmão chegam em Willow Creek, Oregon, com o Impala roncando baixo na chuva. O celular tocou mais cedo: desaparecimentos. A polícia local está perdida. Onde vocês começam a investigação?",
+        opcoes: [
+            { texto: "Investigar o necrotério (procurar sinais sobrenaturais)", proximo: 2 },
+            { texto: "Ir ao bar local (fingir ser agente do FBI e ouvir fofocas)", proximo: 3 },
+            { texto: "Vasculhar a casa da última vítima (procurar pistas)", proximo: 4 }
+        ]
+    },
+    {
+        id: 2,
+        image: "img/necroterio.jpg",
+        altText: "Um corpo coberto por um lençol em uma mesa de metal. O medidor de EMF na sua mão acende.",
+        texto: "No necrotério, o legista (com cara de poucos amigos) diz que os corpos sumiram. Você passa o medidor de EMF perto da gaveta vazia... e ele dispara. Ponto para o Sam.",
+        opcoes: [
+            { texto: "Pressionar o legista sobre atividade fantasma.", proximo: 5 },
+            { texto: "Anotar (Pista: Fantasma?) e ir para o bar.", proximo: 3, pistas: ["EMF alto"] }
+        ]
+    },
+    {
+        id: 3,
+        image: "img/bar-local.jpg",
+        altText: "Um bar de beira de estrada escuro, com um bêbado no balcão.",
+        texto: "No bar, o 'Agente Aguilera' (você, no caso) consegue fazer o bêbado local falar. Ele jura ter visto 'olhos totalmente pretos' na última vítima antes dela desaparecer. Ponto para o Dean.",
+        opcoes: [
+            { texto: "Anotar (Pista: Demônio?) e ir para a casa da vítima.", proximo: 4, pistas: ["Olhos Pretos"] },
+            { texto: "Ignorar o bêbado e investigar o necrotério.", proximo: 2 }
+        ]
+    },
+    {
+        id: 4,
+        image: "img/casa-vitima.jpg",
+        altText: "O batente de uma porta arranhado e um pequeno monte de sal derramado no chão.",
+        texto: "Na casa da última vítima, você encontra o clássico: linha de sal na janela quebrada, mas arranhões fundos na porta, como se algo quisesse entrar. As pistas estão conflitantes.",
+        opcoes: [
+            { texto: "Anotar (Pistas: Sal e Arranhões) e voltar para o motel.", proximo: 5, pistas: ["Sal derramado", "Arranhões"] },
+            { texto: "Seguir para o necrotério para checar os corpos.", proximo: 2 }
+        ]
+    },
+    {
+        id: 5,
+        image: "img/quarto-motel.jpg",
+        altText: "O interior de um quarto de motel barato, com o notebook aberto em cima da cama.",
+        texto: "De volta ao motel. Hora de cruzar as informações. Você abre o notebook e o diário do pai para analisar as pistas. Com base no que você descobriu, que criatura é essa?",
+        opcoes: [
+            { texto: "Hipótese: Fantasma Vingativo (EMF, Sal)", proximo: 6 },
+            { texto: "Hipótese: Demônio de Encruzilhada (Olhos Pretos)", proximo: 7 },
+            { texto: "Hipótese: Lobisomem ou outra criatura (Arranhões)", proximo: 8 }
+        ]
+    },
+    {
+        id: 6,
+        image: "img/porta-malas-fantasma.jpg",
+        altText: "O porta-malas do Impala aberto, mostrando sal grosso e armas de ferro.",
+        texto: "É um fantasma. Clássico. Hora de salgar e queimar. Onde procurar os ossos?",
+        opcoes: [
+            { texto: "O cemitério local (óbvio).", proximo: 9 },
+            { texto: "Debaixo da casa da vítima (sempre tem um porão).", proximo: 10 }
+        ]
+    },
+    {
+        id: 7,
+        image: "img/porta-malas-demonio.jpg",
+        altText: "O porta-malas do Impala aberto, mostrando a Faca da Ruby e um cantil de Água Benta.",
+        texto: "Olhos pretos? É um demônio. 'Son of a...'. Hora do exorcismo. Onde armar a armadilha?",
+        opcoes: [
+            { texto: "Na encruzilhada fora da cidade.", proximo: 11 },
+            { texto: "No necrotério, onde o EMF estava alto.", proximo: 12 }
+        ]
+    },
+    {
+        id: 8,
+        image: "img/porta-malas-monstro.jpg",
+        altText: "O porta-malas do Impala aberto, mostrando balas de prata e um facão.",
+        texto: "Arranhões? É 'monstro da semana'. Provavelmente um Lobisomem, já que a lua está cheia. Onde caçar?",
+        opcoes: [
+            { texto: "Na floresta perto da casa da vítima.", proximo: 13 },
+            { texto: "No bar local (eles sempre voltam à cena).", proximo: 14 }
+        ]
+    },
+    {
+        id: 9,
+        image: "img/cemiterio.jpg",
+        altText: "Um cemitério antigo e enevoado à noite.",
+        texto: "Vocês cavam a noite toda. Encontram o caixão errado. O fantasma aparece e ataca seu irmão!",
+        final: "Você usou ferro, mas era a isca errada. O fantasma era muito forte. Fim.",
+        opcoes: []
+    },
+    {
+        id: 10,
+        image: "img/porao.jpg",
+        altText: "Um porão escuro com ossos humanos em um canto.",
+        texto: "Bingo! Ossos no porão. Você joga sal e gasolina. 'Carry on, my wayward son...'. O fantasma grita e queima.",
+        final: "Fantasma tostado. Caso encerrado. Trabalho feito. (Vitória!)",
+        opcoes: []
+    },
+    {
+        id: 11,
+        image: "img/encruzilhada.jpg",
+        altText: "Uma encruzilhada de terra batida no meio do nada, à noite.",
+        texto: "Vocês desenham uma Armadilha do Diabo na encruzilhada. Um homem de terno aparece. 'Olá, rapazes'.",
+        final: "Vocês o prendem e fazem o exorcismo. O demônio volta para o inferno. (Vitória!)",
+        opcoes: []
+    },
+    {
+        id: 12,
+        image: "img/game-over-demonio.jpg",
+        altText: "O demônio (com olhos pretos) joga você contra a parede do necrotério.",
+        texto: "Era um demônio, mas o EMF alto era dele brincando com os espíritos. Ele estava esperando por vocês. Ele é forte demais.",
+        final: "Vocês caíram na armadilha dele. Fim de jogo.",
+        opcoes: []
+    },
+    {
+        id: 13,
+        image: "img/lobisomem-floresta.jpg",
+        altText: "Um lobisomem rosnando entre as árvores da floresta.",
+        texto: "Vocês encontram o lobisomem na floresta. Ele é rápido. Seu irmão atira com a bala de prata e acerta o coração.",
+        final: "Monstro morto. Caso encerrado. Hora de pegar cerveja e ir para o próximo. (Vitória!)",
+        opcoes: []
+    },
+    {
+        id: 14,
+        image: "img/game-over-lobisomem.jpg",
+        altText: "O lobisomem ataca você por trás dentro do bar.",
+        texto: "Era um lobisomem, mas ele não estava no bar. Ele estava no telhado, esperando. Ele te ataca por trás.",
+        final: "Você devia ter olhado para cima. Fim de jogo.",
+        opcoes: []
+    }
 ];

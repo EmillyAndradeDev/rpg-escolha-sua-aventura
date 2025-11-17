@@ -1,0 +1,106 @@
+:root {
+    --theme-bg-color: #0d1117;
+    --theme-text-color: #E6EDF3;
+    --theme-highlight-color: #ADFF2F;
+    --theme-button-bg: #2F4F4F;
+    --theme-button-text: #FFFFFF;
+    --theme-font-title: 'Oswald', sans-serif;
+    --theme-font-body: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--theme-bg-color);
+    background-image: url('https://www.transparenttextures.com/patterns/dark-denim.png'); 
+    color: var(--theme-text-color);
+    font-family: var(--theme-font-body);
+}
+
+header, footer {
+    background-color: rgba(10, 10, 10, 0.7);
+    border-bottom: 2px solid var(--theme-highlight-color);
+    backdrop-filter: blur(5px);
+}
+footer {
+    border-top: 2px solid var(--theme-highlight-color);
+    border-bottom: none;
+}
+.logo {
+    font-family: var(--theme-font-title);
+    color: var(--theme-highlight-color);
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px rgba(173, 255, 47, 0.7);
+}
+.logo .realce {
+    color: #fff;
+}
+footer a {
+    color: var(--theme-highlight-color);
+}
+
+.game-container {
+    background-color: rgba(13, 17, 23, 0.9);
+    border: 1px solid var(--theme-highlight-color);
+    box-shadow: 0 0 25px rgba(173, 255, 47, 0.5); 
+}
+
+.story-image {
+    border-color: var(--theme-highlight-color);
+}
+
+.story-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--theme-text-color);
+}
+
+.choice-button {
+    background-color: var(--theme-button-bg);
+    color: var(--theme-button-text);
+    font-family: var(--theme-font-body);
+    font-weight: 700;
+    border: 1px solid var(--theme-highlight-color);
+    transition: all 0.3s ease;
+}
+
+.choice-button:hover {
+    background-color: var(--theme-highlight-color);
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(173, 255, 47, 0.5);
+}
+
+.inventory-container {
+    border-top: 2px dashed var(--theme-highlight-color); 
+    opacity: 0.7; 
+    
+    margin-top: 30px;
+    padding-top: 20px;
+    text-align: left;
+}
+
+.inventory-container h4 {
+    font-family: var(--theme-font-title);
+    color: var(--theme-highlight-color);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.inventory-container h4 i {
+    margin-right: 8px;
+}
+
+#clue-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+#clue-list li {
+    font-family: var(--theme-font-body);
+    color: var(--theme-text-color);
+    font-size: 0.9rem;
+    padding: 5px;
+    border-bottom: 1px solid #333;
+}

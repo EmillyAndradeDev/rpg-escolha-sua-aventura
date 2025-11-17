@@ -1,70 +1,76 @@
-const divHistoria = document.getElementById("historia");
-const divOpcoes = document.getElementById("opcoes");
+const storyTextElement = document.getElementById("story-text");
+const choicesContainer = document.getElementById("choices-container");
+const storyImageElement = document.getElementById("story-image");
 
-// Estado do jogador: pistas e arma selecionada (se houver)
-const estado = {
-  pistas: new Set(),
-  armaSelecionada: null
-};
+const clueListElement = document.getElementById("clue-list");
 
-// Função utilitária para adicionar pistas vindas da opção
-function adicionarPistas(pistas) {
-  if (!pistas) return;
-  pistas.forEach(p => estado.pistas.add(p));
-}
+let inventarioDePistas = new Set(); 
 
-// renderiza a cena pelo id (número)
-function mostrarCena(id) {
-  const cena = historia.find(c => c.id === id);
-  if (!cena) {
-    divHistoria.innerHTML = `<p>Erro: cena não encontrada (id ${id}).</p>`;
-    divOpcoes.innerHTML = `<button onclick="location.href='../../index.html'">Voltar</button>`;
-    return;
-  }
+function atualizarInventarioNaTela() {
+    clueListElement.innerHTML = ""; 
 
-  // Texto principal — também mostra pistas coletadas brevemente
-  const pistasList = Array.from(estado.pistas);
-  divHistoria.innerHTML = `<p>${cena.texto}</p>
-                           ${pistasList.length ? `<p><strong>Pistas coletadas:</strong> ${pistasList.join(', ')}</p>` : ''}`;
-  divOpcoes.innerHTML = "";
+    if (inventarioDePistas.size === 0) {
+        clueListElement.innerHTML = "<li>(Nenhuma pista ainda...)</li>";
+        return;
+    }
 
-  // Se for final (não tem opcoes)
-  if (!cena.opcoes || cena.opcoes.length === 0) {
-    divOpcoes.innerHTML = `
-      <p>🏁 ${cena.final}</p>
-      <button onclick="location.href='../../index.html'">Voltar ao menu</button>
-      <button onclick="reiniciar()">Jogar novamente</button>
-    `;
-    return;
-  }
-
-  // Cria botões para cada opção
-  cena.opcoes.forEach(opcao => {
-    const btn = document.createElement("button");
-    btn.textContent = opcao.texto;
-
-    btn.addEventListener("click", () => {
-      // se a opção adiciona pistas, atualiza o estado
-      if (opcao.pistas) adicionarPistas(opcao.pistas);
-
-      // se a opção define arma (em nós de escolha de arma), guarda no estado
-      if (opcao.arma) estado.armaSelecionada = opcao.arma;
-
-      // Lógica extra: quando avançar para a identificação/confronto final,
-      // podemos avaliar pistas + arma (opcional)
-      // Aqui só navegamos para o próximo nó. Alguns nós finais já foram desenhados.
-      mostrarCena(opcao.proximo);
+    inventarioDePistas.forEach(pista => {
+        const li = document.createElement('li');
+        li.innerText = `✔️ ${pista}`;
+        clueListElement.appendChild(li);
     });
-
-    divOpcoes.appendChild(btn);
-  });
 }
 
-function reiniciar() {
-  estado.pistas = new Set();
-  estado.armaSelecionada = null;
-  mostrarCena(1);
+function mostrarCena(id) {
+    
+ const cena = storyData.find(c => c.id === id);
+
+ if (!cena) {
+ console.error(`ERRO: Não foi possível encontrar a cena com id ${id}.`);
+ storyTextElement.innerText = `ERRO: Cena ${id} não encontrada. Verifique o data.js.`;
+ choicesContainer.innerHTML = `<button class="choice-button" onclick="location.href='../../index.html'">Voltar ao Menu</button>`;
+ return;
 }
 
-// inicia a história no nó 1
+storyTextElement.innerText = cena.texto;
+storyImageElement.src = cena.image;
+ storyImageElement.alt = cena.altText || cena.texto;
+ storyImageElement.style.display = 'block';
+    
+choicesContainer.innerHTML = "";
+
+ if (!cena.opcoes || cena.opcoes.length === 0) {
+        const finalText = cena.final || 'Fim da história.';
+ choicesContainer.innerHTML = `
+            <p class="story-text">🏁 ${finalText}</p> 
+            <button class="choice-button" onclick="location.href='../../index.html'">
+                Voltar ao Menu Principal
+            </button>
+        `;
+ return;
+ }
+
+ cena.opcoes.forEach(opcao => {
+ const btn = document.createElement("button");
+        btn.classList.add('choice-button'); 
+btn.textContent = opcao.texto;
+        
+btn.addEventListener('click', () => {
+            
+            if (opcao.pistas) {
+                opcao.pistas.forEach(pista => {
+                    inventarioDePistas.add(pista);
+                });
+                atualizarInventarioNaTela(); 
+            }
+
+ mostrarCena(opcao.proximo);
+ });
+
+        choicesContainer.appendChild(btn);
+ });
+}
+
+atualizarInventarioNaTela(); 
+
 mostrarCena(1);
