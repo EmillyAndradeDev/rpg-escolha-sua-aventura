@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nome: "Missão Espacial", 
             pasta: "espacial",
             descricao: "Comandante da nave Horizon, você está em um planeta desconhecido. Tente sobreviver.",
-            imagem: "assets/img/aventura-espacial.jpg"
+            imagem: "assets/img/aventura-espacial.png"
         },
         { 
             nome: "Caça da Noite", 
