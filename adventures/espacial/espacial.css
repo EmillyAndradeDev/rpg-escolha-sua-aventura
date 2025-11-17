@@ -1,0 +1,74 @@
+:root {
+    --theme-bg-color: #1A0D3E;
+    --theme-text-color: #E0E7FF;
+    --theme-highlight-color: #FFC04D;
+    --theme-button-bg: #4B0082;
+    --theme-button-text: #E0E7FF;
+    --theme-font-title: 'Orbitron', sans-serif;
+    --theme-font-body: 'Rajdhani', sans-serif;
+}
+
+body {
+    background-color: var(--theme-bg-color);
+    background-image: url('https://www.transparenttextures.com/patterns/lined-paper.png'); 
+    background-size: 8px 8px;
+    background-repeat: repeat;
+    color: var(--theme-text-color);
+    font-family: var(--theme-font-body);
+}
+
+header, footer {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-bottom: 2px solid var(--theme-highlight-color);
+    backdrop-filter: blur(8px);
+}
+footer {
+    border-top: 2px solid var(--theme-highlight-color);
+    border-bottom: none;
+}
+.logo {
+    font-family: var(--theme-font-title);
+    color: var(--theme-highlight-color);
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    text-shadow: 0 0 8px rgba(255, 192, 77, 0.7);
+}
+.logo .realce {
+    color: var(--theme-text-color);
+}
+footer a {
+    color: var(--theme-highlight-color);
+}
+
+.game-container {
+    background-color: rgba(13, 22, 43, 0.95);
+    border: 1px solid var(--theme-highlight-color);
+    box-shadow: 0 0 25px rgba(255, 192, 77, 0.6); 
+}
+
+.story-image {
+    border-color: var(--theme-highlight-color);
+    box-shadow: 0 0 15px rgba(255, 192, 77, 0.4);
+}
+
+.story-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--theme-text-color);
+}
+
+.choice-button {
+    background-color: var(--theme-button-bg);
+    color: var(--theme-button-text);
+    font-family: var(--theme-font-body);
+    font-weight: 700;
+    border: 1px solid var(--theme-highlight-color);
+    transition: all 0.3s ease;
+}
+
+.choice-button:hover {
+    background-color: var(--theme-highlight-color);
+    color: var(--theme-bg-color);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 6px 15px rgba(255, 192, 77, 0.7);
+}
