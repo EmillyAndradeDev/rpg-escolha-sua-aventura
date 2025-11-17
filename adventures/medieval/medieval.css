@@ -1,20 +1,22 @@
 :root {
-    --theme-bg-color: #363636; 
-    --theme-text-color: #EAE0C8;
-    --theme-highlight-color: #9B2226;
-    --theme-button-bg: #495057;
+    --theme-bg-color: #E6F0F8;
+    --theme-text-color: #4A4A4A;
+    --theme-highlight-color: #CC3333;
+    --theme-button-bg: #6B7A8F;
     --theme-button-text: #FFFFFF;
     --theme-font-title: 'MedievalSharp', cursive; 
     --theme-font-body: 'Merriweather', serif;
 }
+
 body {
     background-color: var(--theme-bg-color);
-    background-image: url('https://www.transparenttextures.com/patterns/dark-wood.png');
+    background-image: url('https://www.transparenttextures.com/patterns/rice-paper.png'); 
     color: var(--theme-text-color);
     font-family: var(--theme-font-body);
 }
+
 header, footer {
-    background-color: rgba(20, 20, 20, 0.6);
+    background-color: rgba(0, 0, 0, 0.2);
     border-bottom: 2px solid var(--theme-highlight-color);
     backdrop-filter: blur(5px);
 }
@@ -29,24 +31,28 @@ footer {
     letter-spacing: 2px;
 }
 .logo .realce {
-    color: #fff;
+    color: var(--theme-text-color);
 }
 footer a {
     color: var(--theme-highlight-color);
 }
+
 .game-container {
-    background-color: rgba(30, 30, 30, 0.85); 
+    background-color: rgba(255, 255, 255, 0.9);
     border: 1px solid var(--theme-highlight-color);
-    box-shadow: 0 0 20px rgba(155, 34, 38, 0.5); 
+    box-shadow: 0 0 15px rgba(204, 51, 51, 0.4); 
 }
+
 .story-image {
     border-color: var(--theme-highlight-color);
 }
+
 .story-text {
     font-size: 1.1rem;
     line-height: 1.6;
     color: var(--theme-text-color);
 }
+
 .choice-button {
     background-color: var(--theme-button-bg);
     color: var(--theme-button-text);
@@ -54,9 +60,10 @@ footer a {
     font-weight: 700;
     border: 1px solid var(--theme-highlight-color);
 }
+
 .choice-button:hover {
     background-color: var(--theme-highlight-color);
     color: #fff; 
     transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(155, 34, 38, 0.5);
+    box-shadow: 0 4px 10px rgba(204, 51, 51, 0.4);
 }
