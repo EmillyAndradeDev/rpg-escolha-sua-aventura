@@ -1,21 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>The Good Place — Aventura</title>
-  <link rel="stylesheet" href="../../style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The (almost) Good Place</title>
+  <link rel="stylesheet" href="../../game-base.css">
+  <link rel="stylesheet" href="good-place.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet">
   <link rel="shortcut icon" href="../../assets/img/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
-  <div class="conteudo-jogo">
-      <h1>✨ The (Almost) Good Place</h1>
-      <div id="status"></div>
-      <div id="historia"></div>
-      <div id="opcoes"></div>
-  </div>
+  <header>
+    <div class="container nav-wrapper">
+      <a href="../../index.html" class="logo-link">
+        <img class="logo-pequeno" src="../../assets/img/logo-EmillyAndradeDev.png" alt="Logo de Emilly Andrade">
+        <h1 class="logo">Escolha Sua <span class="realce">AVENTURA</span></h1>
+      </a>
+    </div>
+  </header>
+
+  <main class="game-container">
+    <img id="story-image" class="story-image" src="img/placeholder.jpg" alt="Carregando cena...">
+    <p id="story-text" class="story-text">Carregando história...</p>
+    <div id="choices-container" class="choices-container"></div>
+    <div id="status-container" class="status-container"></div>
+  </main>
+
+  <footer>
+    <p>Desenvolvido por: <a href="https://portfolio-emilly-andrade-dev.vercel.app" target="_blank"
+        rel="noopener noreferrer">EmillyAndradeDev</a></p>
+    <p>Para sugestões e correções, entre em contato: <a
+        href="mailto: emilly.andrade.digital@gmail.com">emilly.andrade.digital@gmail.com</a></p>
+  </footer>
 
   <script src="data.js"></script>
   <script src="good-place.js"></script>
 </body>
+
 </html>
