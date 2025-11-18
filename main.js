@@ -42,6 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
             pasta: "circo-misterioso",
             descricao: "Um circo estranho chega à cidade da noite para o dia.",
             imagem: "assets/img/aventura-circo.png"
+        },
+        { 
+            nome: "Caça da Noite 2.0", 
+            pasta: "caca-da-noite-02",
+            descricao: "Um músico local, que ganhou fama da noite para o dia, foi 'rasgado por um urso'... no seu quarto de hotel trancado no 3º andar. Você e seu parceiro devem investigar.",
+            imagem: "assets/img/aventura-caca-da-noite-02.png"
         }
     ];
 
