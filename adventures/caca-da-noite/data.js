@@ -1,8 +1,7 @@
 const storyData = [
     {
         id: 1,
-        // image: "img/id01-chegada-cidade.png",
-        image: "img/id14-game-over-lobisomem.png",
+        image: "img/id01-chegada-cidade.png"
         altText: "O Impala 67 preto parado em frente a uma placa de 'Bem-vindo a Willow Creek' sob chuva.",
         texto: "Você e seu irmão chegam em Willow Creek, Oregon, com o Impala roncando baixo na chuva. O celular tocou mais cedo: desaparecimentos. A polícia local está perdida. Onde vocês começam a investigação?",
         opcoes: [
