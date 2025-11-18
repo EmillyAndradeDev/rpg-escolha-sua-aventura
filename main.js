@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nome: "The (Almost) Good Place", 
             pasta: "good-place",
             descricao: "Você acorda em um 'bairro' perfeito, governado por arquétipos de bondade. É bom demais para ser verdade.",
-            imagem: "assets/img/aventura-good-place.jpg"
+            imagem: "assets/img/aventura-good-place-02.png"
         },
         { 
             nome: "Circo Misterioso", 

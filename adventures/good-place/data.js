@@ -1,8 +1,8 @@
 const storyData = [
     {
         id: 1,
-        image: "img/bairro-perfeito.jpg",
-        altText: "Um bairro ensolarado e perfeito, com casas coloridas e gramados verdes.",
+        image: "img/id01-chegada-02.png",
+        altText: "o 'Guia' do bairro te recebendo",
         texto: "Você acorda em um lugar ensolarado e acolhedor, um 'bairro' governado por arquétipos de bondade. Um ser chamado 'Guia' te cumprimenta e explica: sua chegada depende de suas ações. O que você faz primeiro?",
         opcoes: [
             { texto: "Ajudar um vizinho com suas compras (pequena gentileza)", proximo: 2, pontos: 3 },
@@ -13,7 +13,7 @@ const storyData = [
 
     {
         id: 2,
-        image: "img/cha-da-tarde.jpg",
+        image: "img/id02-cha-da-tarde.png",
         altText: "Um vizinho sorridente te oferecendo uma xícara de chá em um jardim florido.",
         texto: "O vizinho agradece com sinceridade e te convida para o chá da tarde. Você:",
         opcoes: [
@@ -24,7 +24,7 @@ const storyData = [
 
     {
         id: 3,
-        image: "img/loja-envelope.jpg",
+        image: "img/id03-loja-envelope.png",
         altText: "Um envelope cheio de dinheiro caído no chão de uma loja de frozen yogurt.",
         texto: "Ao explorar, encontra uma loja onde um funcionário deixou um envelope com dinheiro cair. Ninguém percebe. O que você faz?",
         opcoes: [
@@ -35,7 +35,7 @@ const storyData = [
 
     {
         id: 4,
-        image: "img/anotacoes-secretas.jpg",
+        image: "img/id04-anotacoes-secretas.png",
         altText: "Um caderno aberto com anotações e diagramas confusos sobre o 'sistema'.",
         texto: "Você encontra anotações que sugerem que nem tudo é tão perfeito, algumas 'falhas' no sistema parecem intencionais. Você:",
         opcoes: [
@@ -46,7 +46,7 @@ const storyData = [
 
     {
         id: 5,
-        image: "img/dilema-moral.jpg",
+        image: "img/id05-dilema-moral.png",
         altText: "Duas pessoas em um jardim, uma parecendo doente e outra saudável.",
         texto: "No chá, a conversa vira sobre moralidade e um dilema é apresentado: salvar uma vida a custo de mentir para um amigo. Você:",
         opcoes: [
@@ -58,7 +58,7 @@ const storyData = [
 
     {
         id: 6,
-        image: "img/tremor.jpg",
+        image: "img/id06-tremor.png",
         altText: "Uma xícara de chá vibrando em uma mesa, com o líquido tremendo.",
         texto: "Você começa a sentir que suas escolhas têm reflexo imediato na paisagem: pequenos tremores, mudanças sutis. Um morador pergunta por sua opinião sobre justiça. O que responde?",
         opcoes: [
@@ -69,7 +69,7 @@ const storyData = [
 
     {
         id: 7,
-        image: "img/visitante-misterioso.jpg",
+        image: "img/id07-visitante-misterioso.png",
         altText: "Um homem de terno elegante te observando de longe, por trás de uma árvore.",
         texto: "Suas ações no dilema chamaram atenção: um visitante misterioso observa. Ele te oferece um teste final no fim do dia, uma avaliação que pode determinar o seu destino. Você aceita o teste?",
         opcoes: [
@@ -80,7 +80,7 @@ const storyData = [
 
     {
         id: 8,
-        image: "img/solucao-criativa.jpg",
+        image: "img/id08-solucao-criativa.png",
         altText: "Um grupo de pessoas sorrindo e trabalhando juntas em um projeto comunitário.",
         texto: "Ao procurar uma terceira via, você encontra uma solução criativa que ajuda todos sem mentiras e inspira outros moradores.",
         opcoes: [
@@ -91,7 +91,7 @@ const storyData = [
 
     {
         id: 9,
-        image: "img/jantar-filosofico.jpg",
+        image: "img/id09-jantar-filosofico.png",
         altText: "Uma longa mesa de jantar com pessoas debatendo alegremente.",
         texto: "Sua resposta provoca um debate, alguns te elogiam, outros questionam. À noite, você recebe um convite para um jantar filosófico.",
         opcoes: [
@@ -102,7 +102,7 @@ const storyData = [
 
     {
         id: 10,
-        image: "img/sala-teste.jpg",
+        image: "img/id10-sala-teste.png",
         altText: "Uma sala branca e estéril com duas portas, uma vermelha e uma azul.",
         texto: "O teste de avaliação é uma sala com registros das suas escolhas passadas e um enigma moral que exige ação imediata: salvar um estranho da morte iminente ou garantir a segurança de vários conhecidos (que não estão em perigo imediato). Você:",
         opcoes: [
@@ -114,7 +114,7 @@ const storyData = [
 
     {
         id: 11,
-        image: "img/guia-julgamento.jpg",
+        image: "img/id11-guia-julgamento.png",
         altText: "O Guia te olhando com uma expressão neutra, segurando uma prancheta.",
         texto: "Você evita o teste, prefere ações cotidianas. Ao final do dia, o Guia aparece e diz que suas escolhas serão consideradas de qualquer forma.",
         opcoes: [
@@ -125,7 +125,7 @@ const storyData = [
 
     {
         id: 12,
-        image: "img/grupo-sabotador.jpg",
+        image: "img/id12-grupo-sabotador.png",
         altText: "Um grupo de pessoas cochichando em um canto escuro de uma cafeteria.",
         texto: "Enquanto isso, um rumor corre: há um grupo que tenta sabotar o sistema 'perfeito' para testar quem é realmente bom. Você se aproxima para investigar.",
         opcoes: [
@@ -136,7 +136,7 @@ const storyData = [
 
     {
         id: 13,
-        image: "img/medio-lugar.jpg",
+        image: "img/id13-medio-lugar.png",
         altText: "Um escritório bege e sem graça, com uma luz fluorescente piscando.",
         texto: "Você escolheu o anonimato. O 'Médio Lugar' é confortável, mas falta sentido às suas ações. Alguns dias depois, um chamado: reavaliação possível. Quer tentar novamente?",
         opcoes: [
@@ -147,7 +147,7 @@ const storyData = [
 
     {
         id: 14,
-        image: "img/missao-reparar.jpg",
+        image: "img/id14-construir-casa.png",
         altText: "Você e o grupo de 'sabotadores' ajudando a construir uma casa em um lugar destruído.",
         texto: "O grupo revela que seu teste revela mais sobre aprender a ser bom do que ser impecável. Eles te propõem uma missão: ajudar a reparar danos reais numa cidade distante.",
         opcoes: [
@@ -158,7 +158,7 @@ const storyData = [
 
     {
         id: 20,
-        image: "img/good-place.jpg",
+        image: "img/id20-good-place.png",
         altText: "Uma porta verde brilhante se abrindo para um lugar paradisíaco.",
         texto: "🏆 FINAL: Você ganhou o Good Place. Suas ações demonstraram crescimento moral consistente; você é convidado a continuar evoluindo num lugar de alegria duradoura.",
         final: "Good Place: Vida plena de aprendizado e felicidade.",
@@ -167,7 +167,7 @@ const storyData = [
 
     {
         id: 21,
-        image: "img/medio-lugar-final.jpg",
+        image: "img/id21-medio-lugar-final.png",
         altText: "Você em um escritório bege, olhando para um relógio na parede.",
         texto: "➖ FINAL: Médio Lugar. Nem terrível nem perfeito,  tempo e trabalho aguardam para transformar escolhas em significado.",
         final: "Medium Place: Uma chance de reflexão contínua.",
@@ -176,7 +176,7 @@ const storyData = [
     
     {
         id: 22,
-        image: "img/bad-place.jpg",
+        image: "img/id22-bad-place-final.png",
         altText: "Uma sala escura com um homem de terno sorrindo sarcasticamente para você.",
         texto: "🔥 FINAL: Bad Place. Suas escolhas revelaram egoísmo ou dano sem arrependimento. Aqui você enfrentará consequências (e talvez oportunidade de mudança).",
         final: "Bad Place: Consequências severas.",
