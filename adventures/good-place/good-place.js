@@ -25,7 +25,7 @@ ${flagsList.length ? `<p><strong>Marcas:</strong> ${flagsList.join(", ")}</p>` :
 }
 
 function julgar() {
-  if (estado.pontos >= 15 || estado.flags.has("missao_aceita")) {
+  if (estado.pontos >= 14 || estado.flags.has("missao_aceita")) {
     mostrarFinalPorId(20);
   } else if (estado.pontos >= 5) {
     mostrarFinalPorId(21);
