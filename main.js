@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nome: "Circo Misterioso", 
             pasta: "circo-misterioso",
             descricao: "Um circo estranho chega à cidade da noite para o dia.",
-            imagem: "assets/img/aventura-circo.jpg"
+            imagem: "assets/img/aventura-circo.png"
         }
     ];
 
