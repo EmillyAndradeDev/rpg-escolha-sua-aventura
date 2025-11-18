@@ -1,0 +1,79 @@
+:root {
+    --theme-bg-color: #1a0505;
+    --theme-text-color: #fdf5e6;
+    --theme-highlight-color: #ffcc00;
+    --theme-button-bg: #8b0000;
+    --theme-button-text: #fdf5e6;
+    --theme-font-title: 'Rye', serif;
+    --theme-font-body: 'Lora', serif;
+}
+
+body {
+    background-color: var(--theme-bg-color);
+    background-image: repeating-linear-gradient(
+        90deg,
+        #1a0505,
+        #1a0505 20px,
+        #2b0a0a 20px,
+        #2b0a0a 40px
+    );
+    color: var(--theme-text-color);
+    font-family: var(--theme-font-body);
+}
+
+header, footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 3px dashed var(--theme-highlight-color);
+    backdrop-filter: blur(2px);
+}
+footer {
+    border-top: 3px dashed var(--theme-highlight-color);
+    border-bottom: none;
+}
+
+.logo {
+    font-family: var(--theme-font-title);
+    color: var(--theme-highlight-color);
+    font-size: 2rem;
+    text-shadow: 2px 2px 0px #8b0000;
+}
+.logo .realce {
+    color: #fff;
+}
+footer a {
+    color: var(--theme-highlight-color);
+}
+
+.game-container {
+    background-color: #0f0f0f;
+    border: 4px double var(--theme-highlight-color);
+    box-shadow: 0 0 30px rgba(139, 0, 0, 0.4);
+}
+
+.story-image {
+    border: 2px solid var(--theme-highlight-color);
+    border-radius: 4px;
+}
+
+.story-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--theme-text-color);
+}
+
+.choice-button {
+    background-color: var(--theme-button-bg);
+    color: var(--theme-button-text);
+    font-family: var(--theme-font-title); 
+    font-weight: 400;
+    border: 1px solid var(--theme-highlight-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.choice-button:hover {
+    background-color: var(--theme-highlight-color);
+    color: #1a0505;
+    transform: scale(1.02);
+    box-shadow: 0 0 15px var(--theme-highlight-color);
+}
