@@ -13,7 +13,7 @@ const storyData = [
 
     {
         id: 2,
-        image: "img/id02-cha-da-tarde.png",
+        image: "img/id02-cha-da-tarde-02.png",
         altText: "Um vizinho sorridente te oferecendo uma xícara de chá em um jardim florido.",
         texto: "O vizinho agradece com sinceridade e te convida para o chá da tarde. Você:",
         opcoes: [
@@ -24,7 +24,7 @@ const storyData = [
 
     {
         id: 3,
-        image: "img/id03-loja-envelope.png",
+        image: "img/id03-loja-envelope-02.png",
         altText: "Um envelope cheio de dinheiro caído no chão de uma loja de frozen yogurt.",
         texto: "Ao explorar, encontra uma loja onde um funcionário deixou um envelope com dinheiro cair. Ninguém percebe. O que você faz?",
         opcoes: [
@@ -35,7 +35,7 @@ const storyData = [
 
     {
         id: 4,
-        image: "img/id04-anotacoes-secretas.png",
+        image: "img/id04-anotacoes-secretas-02.png",
         altText: "Um caderno aberto com anotações e diagramas confusos sobre o 'sistema'.",
         texto: "Você encontra anotações que sugerem que nem tudo é tão perfeito, algumas 'falhas' no sistema parecem intencionais. Você:",
         opcoes: [
@@ -47,7 +47,7 @@ const storyData = [
     {
         id: 5,
         image: "img/id05-dilema-moral.png",
-        altText: "Duas pessoas em um jardim, uma parecendo doente e outra saudável.",
+        altText: "Algumas pessoas em um jardim, uma parecendo preocupadas.",
         texto: "No chá, a conversa vira sobre moralidade e um dilema é apresentado: salvar uma vida a custo de mentir para um amigo. Você:",
         opcoes: [
             { texto: "Salvar a vida; mente para proteger (consequência utilitarista)", proximo: 7, pontos: 1, flag: "mentira protetora" },
@@ -58,7 +58,7 @@ const storyData = [
 
     {
         id: 6,
-        image: "img/id06-tremor.png",
+        image: "img/id06-tremor-02.png",
         altText: "Uma xícara de chá vibrando em uma mesa, com o líquido tremendo.",
         texto: "Você começa a sentir que suas escolhas têm reflexo imediato na paisagem: pequenos tremores, mudanças sutis. Um morador pergunta por sua opinião sobre justiça. O que responde?",
         opcoes: [
@@ -114,7 +114,7 @@ const storyData = [
 
     {
         id: 11,
-        image: "img/id11-guia-julgamento.png",
+        image: "img/id11-guia-julgamento-02.png",
         altText: "O Guia te olhando com uma expressão neutra, segurando uma prancheta.",
         texto: "Você evita o teste, prefere ações cotidianas. Ao final do dia, o Guia aparece e diz que suas escolhas serão consideradas de qualquer forma.",
         opcoes: [
@@ -137,7 +137,7 @@ const storyData = [
     {
         id: 13,
         image: "img/id13-medio-lugar.png",
-        altText: "Um escritório bege e sem graça, com uma luz fluorescente piscando.",
+        altText: "Um escritório bege e sem graça, com uma luz fluorescente.",
         texto: "Você escolheu o anonimato. O 'Médio Lugar' é confortável, mas falta sentido às suas ações. Alguns dias depois, um chamado: reavaliação possível. Quer tentar novamente?",
         opcoes: [
             { texto: "Tentar reavaliar (volta ao centro)", proximo: "julgamento" },
@@ -158,7 +158,7 @@ const storyData = [
 
     {
         id: 20,
-        image: "img/id20-good-place.png",
+        image: "img/id20-good-place-02.png",
         altText: "Uma porta verde brilhante se abrindo para um lugar paradisíaco.",
         texto: "🏆 FINAL: Você ganhou o Good Place. Suas ações demonstraram crescimento moral consistente; você é convidado a continuar evoluindo num lugar de alegria duradoura.",
         final: "Good Place: Vida plena de aprendizado e felicidade.",
