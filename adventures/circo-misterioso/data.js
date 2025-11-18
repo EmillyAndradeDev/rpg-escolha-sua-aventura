@@ -1,7 +1,7 @@
 const storyData = [
     {
         id: 1,
-        image: "img/id01-tenda-externa.png",
+        image: "img/id01-tenda-externa-02.png",
         altText: "Uma grande tenda de circo listrada de vermelho e branco, iluminada por tochas sob a luz da lua.",
         texto: "Um circo misterioso chega à cidade. Você decide entrar na tenda principal, iluminada apenas por tochas. O apresentador, com um sorriso estranho, anuncia que o espetáculo vai começar. O que você faz?",
         opcoes: [
@@ -23,7 +23,7 @@ const storyData = [
 
     {
         id: 3,
-        image: "img/id03-bastidores-gaiola.png",
+        image: "img/id03-bastidores-gaiola-02.png",
         altText: "Um corredor escuro nos bastidores cheio de gaiolas cobertas com panos velhos.",
         texto: "Nos bastidores, você encontra gaiolas cobertas com panos. Algo se mexe lá dentro.",
         opcoes: [
@@ -83,7 +83,7 @@ const storyData = [
 
     {
         id: 9,
-        image: "img/id09-vitoria-cortina.png",
+        image: "img/id09-vitoria-cortina-02.png",
         altText: "Uma fresta na lona do circo mostrando a liberdade lá fora.",
         texto: "Você encontra uma cortina escondida que leva para fora do circo. Você escapa! Sobreviveu... desta vez.",
         opcoes: []
