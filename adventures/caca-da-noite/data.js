@@ -115,7 +115,7 @@ const storyData = [
     },
     {
         id: 13,
-        image: "img/lobisomem-floresta.jpg",
+        image: "img/id13-lobisomem-floresta-02.png",
         altText: "Um lobisomem rosnando entre as árvores da floresta.",
         texto: "Vocês encontram o lobisomem na floresta. Ele é rápido. Seu irmão atira com a bala de prata e acerta o coração.",
         final: "Monstro morto. Caso encerrado. Hora de pegar cerveja e ir para o próximo. (Vitória!)",
